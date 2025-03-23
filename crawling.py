@@ -46,6 +46,6 @@ if __name__ == "__main__":
     save_dir_dog = "E:/Users/sj879/Desktop/vscode/Research_in_Physics/dog_picture"
     
     
-    img_crawler("고양이", image_cnt, save_dir_cat)
-    img_crawler("강아지", image_cnt, save_dir_dog)
+    img_crawler("cat", image_cnt, save_dir_cat)
+    img_crawler("dog", image_cnt, save_dir_dog)
 
