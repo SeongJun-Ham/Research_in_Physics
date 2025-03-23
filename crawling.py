@@ -14,7 +14,7 @@ def img_crawler(target_name, target_image_count, target_save_dir):
     google_search_prefix_URL = "https://www.google.com/search?tbm=isch&q="
     driver.get(google_search_prefix_URL+target_name)
 
-    for _ in range(2):
+    for _ in range(4):
         driver.find_element(By.CSS_SELECTOR, "body").send_keys(Keys.END)
         time.sleep(1)
 
