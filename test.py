@@ -1,12 +1,13 @@
 import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
+import os
 
 # 저장된 모델 로드
 model = load_model('dog_cat_classifier.h5')
 
 # 이미지 경로 설정 (분류할 이미지)
-img_path = 'E:/Users/sj879/Desktop/dogcat.jpg'  # 예측할 이미지 경로로 변경하세요
+img_path = os.getcwd() + "\Research_in_Physics\dogcat.jpg"  # 예측할 이미지 경로로 변경하세요
 
 # 이미지를 모델 입력 형태로 전처리
 img = image.load_img(img_path, target_size=(150, 150))  # 모델에 맞는 크기로 조정
