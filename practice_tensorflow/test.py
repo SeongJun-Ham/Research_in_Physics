@@ -15,8 +15,11 @@ img_array = image.img_to_array(img)  # 이미지를 배열로 변환
 img_array = np.expand_dims(img_array, axis=0)  # 배치 차원 추가
 img_array /= 255.0  # 정규화
 
+print(f"{img} \n {img_array}")
+
 # 예측
 predictions = model.predict(img_array)
+print(f"{type(predictions)}, \n {predictions}")
 print(f"{predictions}")
 print(f"{type(predictions)}")
 print(predictions[0][0])

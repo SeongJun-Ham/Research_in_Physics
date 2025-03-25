@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
 
 # 데이터 경로 설정
-base_dir = os.getcwd() + "\Research_in_Physics"
+base_dir = 'E:/Users/sj879/Desktop/vscode/Research_in_Physics'
 train_data_dir = os.path.join(base_dir)
 cat_data_dir = os.path.join(train_data_dir, 'cat_picture')
 dog_data_dir = os.path.join(train_data_dir, 'dog_picture')
@@ -20,6 +20,7 @@ train_datagen = ImageDataGenerator(
     horizontal_flip=True,
     fill_mode='nearest'
 )
+
 # train_generator를 사용하여 cat과 dog 이미지를 가져옵니다.
 train_generator = train_datagen.flow_from_directory(
     base_dir,
@@ -54,7 +55,6 @@ model.fit(
     steps_per_epoch=train_generator.samples // train_generator.batch_size,
     epochs=10  # 원하는 에폭 수로 조정
 )
-
 
 # 모델 저장
 model.save('dog_cat_classifier.h5')
